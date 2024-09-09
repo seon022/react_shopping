@@ -10,8 +10,8 @@ const Menu = () => {
             <Link className="mainMenu mr20" to="/product">
                 Shop
             </Link>
-            <Link className="mainMenu mr20" to="/product">
-                Page
+            <Link className="mainMenu mr20" to="/cart">
+                Cart
             </Link>
         </div>
     );

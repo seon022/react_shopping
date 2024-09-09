@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { fetchProductById } from "../api/products";
+import { FaShoppingCart } from "react-icons/fa";
 
 const ProductInfo = () => {
     const [product, setProduct] = useState(null);
@@ -24,11 +25,13 @@ const ProductInfo = () => {
                     <img src={product.image} alt={product.title} />
                 </div>
                 <div>
-                    <p>가격: ${product.price}</p>
+                    <p>가격: $ {product.price}</p>
                     <p>설명: {product.description}</p>
                 </div>
 
-                {/* <button>장바구니에 추가</button> */}
+                <button className="cartBtn">
+                    장바구니에 추가 <FaShoppingCart />
+                </button>
             </div>
         </div>
     );
